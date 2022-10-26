@@ -12,10 +12,6 @@
   background-color: var(--black);
 }
 
-.main {
-  /* display: flex; */
-}
-
 /* Header */
 
 header {
@@ -46,12 +42,12 @@ header > p {
   color: var(--white);
 }
 
-header > a {
-  margin: 50px 0;
+header > .down {
+  margin: 100px 0;
 }
 
-header > a > svg:hover {
-  fill: var(--yellow);
+header > .down > svg {
+  /* stroke-width: 5px; */
 }
 
 /* Sidebar */

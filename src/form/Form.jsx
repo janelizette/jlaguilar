@@ -1,12 +1,16 @@
 import React from "react";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiFacebook,
-  FiChevronDown,
-} from "react-icons/fi";
-import { AiOutlineDown } from "react-icons/ai";
+import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
+import { MdOutlineArrowDownward } from "react-icons/md";
+import { motion } from "framer-motion";
 import "./Form.css";
+
+const bounceTransition = {
+  y: {
+    duration: 0.5,
+    yoyo: Infinity,
+    ease: "easeOut",
+  },
+};
 
 function Form() {
   return (
@@ -15,26 +19,16 @@ function Form() {
         <h3>Hi, I'm</h3>
         <h1>Jane Lizette Aguilar.</h1>
         <h2>I'm a web developer.</h2>
-        {/* <p>I graduated with a degree in Computer Engineering the Polytechnic University of the Philippines. </p> */}
 
-        <a href="#about">
-          <AiOutlineDown color="#ffd100" size={150} />
-        </a>
-
-        {/* <ul>
-          <li>
-            <a href="#email">E-mail</a>
-          </li>
-          <li>
-            <a
-              href="https://drive.google.com/file/d/1YdW8TPrgiIcE_Yd7qKTrAYWizPkNrhl4/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </li>
-        </ul> */}
+        <motion.div
+          className="down"
+          transition={bounceTransition}
+          animate={{
+            y: ["0%", "-20%"],
+          }}
+        >
+          <MdOutlineArrowDownward color="#ffee32" size={80} />
+        </motion.div>
       </header>
 
       <div className="sidebar">
