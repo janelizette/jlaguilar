@@ -1,6 +1,7 @@
 import React from "react";
 import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
 import { MdOutlineArrowDownward } from "react-icons/md";
+import { GoChevronDown } from "react-icons/go";
 import { motion } from "framer-motion";
 import "./Form.css";
 
@@ -27,7 +28,7 @@ function Form() {
             y: ["0%", "-20%"],
           }}
         >
-          <MdOutlineArrowDownward color="#ffee32" size={80} />
+          <GoChevronDown color="#ffee32" size={80} />
         </motion.div>
       </header>
 
