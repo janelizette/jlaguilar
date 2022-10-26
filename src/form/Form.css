@@ -8,10 +8,6 @@
   --font-mono: "Roboto Mono", monospace;
 }
 
-* {
-  background-color: var(--black);
-}
-
 /* Header */
 
 header {
@@ -80,6 +76,5 @@ header > .down > svg {
 footer {
   text-align: center;
   color: var(--white);
-  background-color: gray;
   font-family: var(--font-mono);
 }
