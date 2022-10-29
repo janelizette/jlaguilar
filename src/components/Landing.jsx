@@ -3,7 +3,7 @@ import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { GoChevronDown } from "react-icons/go";
 import { motion } from "framer-motion";
-import "./Form.css";
+import "../styles/Landing.css";
 
 const bounceTransition = {
   y: {
@@ -13,7 +13,7 @@ const bounceTransition = {
   },
 };
 
-function Form() {
+function Landing() {
   return (
     <div className="main">
       <header>
@@ -32,7 +32,7 @@ function Form() {
         </motion.div>
       </header>
 
-      <div className="sidebar">
+      {/* <div className="sidebar">
         <ul>
           <li>
             <a
@@ -63,13 +63,13 @@ function Form() {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
 
-      <footer>
+      {/* <footer>
         <p>Designed and built by Jane Lizette Aguilar</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
 
-export default Form;
+export default Landing;
