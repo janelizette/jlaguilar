@@ -17,7 +17,7 @@
   /* background-color: var(--black); */
 }
 
-.fp-noscroll {
-  justify-content: flex-end;
+/* .fp-noscroll {
+  justify-content: flex-start;
   overflow: hidden;
-}
+} */
