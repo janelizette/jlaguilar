@@ -1,5 +1,6 @@
 import "./App.css";
 import ReactFullpage from "@fullpage/react-fullpage";
+
 import Landing from "./components/Landing";
 import Education from "./components/Education";
 import AboutMe from "./components/AboutMe";
@@ -16,10 +17,10 @@ const App = () => (
     navigationTooltips={anchors}
     sectionsColor={["#202020", "#202020"]} // Dagdag ka isa dito pag dadagdag ka section, background colors to
     onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
+      // console.log("onLeave event", { origin, destination, direction });
     }}
     render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi);
+      // console.log("render prop change", state, fullpageApi);
       return (
         <div>
           <div className="section">

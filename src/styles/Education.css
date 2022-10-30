@@ -39,17 +39,20 @@
   color: var(--light-yellow);
 }
 
-.tertiary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#year {
+  font-weight: 300;
+  margin: 5px 0;
+  font-size: 14px;
 }
 
-.tertiary > p {
-  font-family: var(--font-mono);
-  color: var(--white);
-  margin: 10px 0;
+#position {
+  font-weight: 400;
+  margin: 5px 0;
+}
 
+#org {
+  font-weight: 500;
+  margin: 5px 0;
 }
 
 .univ {
