@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import "@fontsource/roboto-mono";
-import "../styles/Education.css";
+import Educ from "../styles/Education.module.css";
 
 const StyledTabs = styled((props) => (
   <Tabs
@@ -106,16 +106,15 @@ function Education(props) {
   };
 
   return (
-    <div className="education-main">
-      <div className="title">
-        <h1>Experience & Education</h1>
+    <div className={Educ.container}>
+      <div className={Educ.title}>
+        <h1 className={Educ.heading1}>Experience & Education</h1>
       </div>
 
       <div className="exp-educ">
         <Box
           sx={{
-            // flexGrow: 1,
-            // bgcolor: "gray",
+            flexGrow: 1,
             display: "flex",
             padding: 5,
             width: 655,
@@ -135,29 +134,35 @@ function Education(props) {
           </StyledTabs>
 
           <TabPanel value={value} index={0}>
-            <h3 id="org">Thirty One Digital Media Solutions Inc.</h3>
-            <h4 id="position">Quality Assurance Intern</h4>
-            <p id="year">August 2021 - September 2021</p>
+            <h3 className={Educ.org}>
+              Thirty One Digital Media Solutions Inc.
+            </h3>
+            <h4 className={Educ.position}>Quality Assurance Intern</h4>
+            <p className={Educ.year}>August 2021 - September 2021</p>
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <h3 id="org">Polytechnic University of the Philippines</h3>
-            <h4 id="position">Bachelor of Science in Computer Engineering</h4>
-            <p id="year">2018 - 2022</p>
+            <h3 className={Educ.org}>
+              Polytechnic University of the Philippines
+            </h3>
+            <h4 className={Educ.position}>
+              Bachelor of Science in Computer Engineering
+            </h4>
+            <p className={Educ.year}>2018 - 2022</p>
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <h3 id="org">Malabon National High School</h3>
-            <h4 id="position">
+            <h3 className={Educ.org}>Malabon National High School</h3>
+            <h4 className={Educ.position}>
               Science, Technology, Engineering, and Mathematics
             </h4>
-            <p id="year">2016 - 2018</p>
+            <p className={Educ.year}>2016 - 2018</p>
 
-            <h4 id="position">Special Science Class</h4>
-            <p id="year">2012 - 2016</p>
+            <h4 className={Educ.position}>Special Science Class</h4>
+            <p className={Educ.year}>2012 - 2016</p>
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <h3 id="org">Muzon Elementary School</h3>
-            <h4 id="position">Valedictorian</h4>
-            <p id="year">2006 - 2012</p>
+            <h3 className={Educ.org}>Muzon Elementary School</h3>
+            <h4 className={Educ.position}>Valedictorian</h4>
+            <p className={Educ.year}>2006 - 2012</p>
           </TabPanel>
         </Box>
       </div>

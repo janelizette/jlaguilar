@@ -1,0 +1,27 @@
+.container {
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin: 7% 7% 0;
+}
+
+.heading3 {
+  color: var(--white);
+  font-size: 60px;
+}
+
+.heading2 {
+  color: var(--white);
+  font-size: 80px;
+}
+
+.heading1 {
+  color: var(--light-yellow);
+  font-size: 100px;
+}
+
+.down {
+  margin: 100px 0 0;
+}

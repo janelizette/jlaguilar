@@ -1,14 +1,4 @@
-:root {
-  --black: #202020;
-  --yellow: #ffd100;
-  --light-yellow: #ffee32;
-  --lightest-yellow: #fff0ad;
-  --white: #f7f4f3;
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "Roboto Mono", monospace;
-}
-
-.education-main {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,39 +24,23 @@
   margin-left: 20px;
 }
 
-.title > h1 {
+.heading1 {
   font-family: var(--font-sans);
   color: var(--light-yellow);
 }
 
-#year {
-  font-weight: 300;
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-#position {
-  font-weight: 400;
-  margin: 5px 0;
-}
-
-#org {
+.org {
   font-weight: 500;
   margin: 5px 0;
 }
 
-.univ {
-  display: flex;
+.position {
+  font-weight: 400;
+  margin: 5px 0;
 }
 
-.univ > h2 {
-  font-family: var(--font-mono);
-  font-weight: 600;
-  margin: 0 40px;
-  font-size: 18px;
-  color: var(--white);
-}
-
-.univ > #year {
+.year {
   font-weight: 300;
+  margin: 5px 0;
+  font-size: 14px;
 }

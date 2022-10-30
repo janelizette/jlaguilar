@@ -1,7 +1,7 @@
 import "./App.css";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import Landing from "./components/Landing";
+import Introduction from "./components/Introduction";
 import Education from "./components/Education";
 import AboutMe from "./components/AboutMe";
 
@@ -24,9 +24,9 @@ const App = () => (
       return (
         <div>
           <div className="section">
-            <Landing />
+            <Introduction />
           </div>
-          <div className="section" style={{ height: "100vh", width: "100vw" }}>
+          <div className="section">
             <Education />
           </div>
         </div>
