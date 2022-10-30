@@ -16,3 +16,8 @@
   padding: 0;
   /* background-color: var(--black); */
 }
+
+.fp-noscroll {
+  justify-content: flex-start;
+  overflow: hidden;
+}

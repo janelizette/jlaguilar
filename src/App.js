@@ -23,7 +23,7 @@ const App = () => (
       console.log("render prop change", state, fullpageApi);
       return (
         <div>
-          <div className="section" style={{ width: "100vw" }}>
+          <div className="section">
             <Landing />
           </div>
           <div className="section" style={{ height: "100vh", width: "100vw" }}>
