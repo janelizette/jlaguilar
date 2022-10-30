@@ -16,7 +16,7 @@ const bounceTransition = {
 
 function Introduction() {
   return (
-    <div className="main">
+    <div className={Intro.main}>
       <header className={Intro.container}>
         <h3 className={Intro.heading3}>Hi, I'm</h3>
         <h1 className={Intro.heading1}>Jane Lizette Aguilar.</h1>

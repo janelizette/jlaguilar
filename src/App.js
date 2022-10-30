@@ -23,10 +23,10 @@ const App = () => (
       console.log("render prop change", state, fullpageApi);
       return (
         <div>
-          <div className="section">
+          <div className="section" style={{width: "100vw", height: "100vh"}}>
             <Introduction />
           </div>
-          <div className="section">
+          <div className="section" style={{width: "100vw", height: "100vh"}}>
             <Education />
           </div>
         </div>
