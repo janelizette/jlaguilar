@@ -17,13 +17,13 @@ const App = () => (
     navigationTooltips={anchors}
     sectionsColor={["#202020", "#202020"]} // Dagdag ka isa dito pag dadagdag ka section, background colors to
     onLeave={(origin, destination, direction) => {
-      // console.log("onLeave event", { origin, destination, direction });
+      console.log("onLeave event", { origin, destination, direction });
     }}
     render={({ state, fullpageApi }) => {
-      // console.log("render prop change", state, fullpageApi);
+      console.log("render prop change", state, fullpageApi);
       return (
         <div>
-          <div className="section">
+          <div className="section" style={{ width: "100vw" }}>
             <Landing />
           </div>
           <div className="section" style={{ height: "100vh", width: "100vw" }}>
