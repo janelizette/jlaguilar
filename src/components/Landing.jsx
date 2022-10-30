@@ -19,7 +19,7 @@ function Landing() {
       <header>
         <h3>Hi, I'm</h3>
         <h1>Jane Lizette Aguilar.</h1>
-        <h2>I'm a web developer.</h2>
+        <h2>I'm a computer engineer.</h2>
 
         <motion.div
           className="down"
