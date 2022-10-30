@@ -18,6 +18,6 @@
 }
 
 .fp-noscroll {
-  /* justify-content: flex-start; */
+  justify-content: center;
   overflow: hidden;
 }
