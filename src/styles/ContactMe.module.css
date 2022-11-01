@@ -125,11 +125,10 @@
 }
 
 .inputs:focus {
-  /* border-bottom: 3px solid var(--light-yellow); */
-  /* outline: 2px solid var(--light-yellow); */
   outline: none;
   border: 2px solid var(--light-yellow);
   transition: border 0.3s ease;
+  background-color: transparent;
 }
 
 .nameLabel,
@@ -206,4 +205,13 @@
   color: var(--light-yellow);
   opacity: 1;
   font-size: 13px;
+}
+
+/* Autofill */
+.inputs:-webkit-autofill,
+.inputs:-webkit-autofill:hover,
+.inputs:-webkit-autofill:focus,
+.inputs:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--black) inset !important;
+  -webkit-text-fill-color: var(--white) !important;
 }
