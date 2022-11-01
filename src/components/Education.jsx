@@ -76,7 +76,7 @@ function TabPanel(props) {
             justifyContent: "center",
           }}
         >
-          <StyledTypography sx={{ color: "white" }}>
+          <StyledTypography sx={{ color: "white" }} component={"span"}>
             {children}
           </StyledTypography>
         </Box>

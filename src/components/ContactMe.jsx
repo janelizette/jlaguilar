@@ -120,11 +120,13 @@ function ContactMe() {
           <label className={[Contact.msgLabel, Contact.inputs].join(" ")}>
             Message
           </label>
-          <input
-            type="submit"
-            value="Send"
-            className={[Contact.button, Contact.inputs].join(" ")}
-          />
+          <div className={Contact.btnContainer}>
+            <input
+              type="submit"
+              value="Send message!"
+              className={[Contact.button, Contact.inputs].join(" ")}
+            />
+          </div>
         </form>
       </div>
     </div>
