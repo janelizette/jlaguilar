@@ -95,6 +95,9 @@ function ContactMe() {
               className={[Contact.name, Contact.inputs].join(" ")}
               required
             />
+            <label className={[Contact.nameLabel, Contact.inputs].join(" ")}>
+              Name
+            </label>
             <input
               type="email"
               name="user_email"
@@ -103,6 +106,9 @@ function ContactMe() {
               required
               onChange={(e) => setEmail(e.target.value)}
             />
+            <label className={[Contact.emailLabel, Contact.inputs].join(" ")}>
+              Email
+            </label>
           </div>
 
           <textarea
@@ -111,7 +117,14 @@ function ContactMe() {
             className={`${Contact.message} ${Contact.inputs}`}
             required
           />
-          <input type="submit" value="Send" className={Contact.button} />
+          <label className={[Contact.msgLabel, Contact.inputs].join(" ")}>
+            Message
+          </label>
+          <input
+            type="submit"
+            value="Send"
+            className={[Contact.button, Contact.inputs].join(" ")}
+          />
         </form>
       </div>
     </div>

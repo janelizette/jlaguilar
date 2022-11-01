@@ -28,7 +28,7 @@
   display: block;
   position: relative;
   content: "";
-  width: 350px;
+  width: 470px;
   height: 1px;
   background: var(--light-yellow);
   margin-left: 20px;
@@ -53,22 +53,6 @@
   font-family: var(--font-mono);
   color: var(--white);
   margin: 20px 0;
-}
-
-.button {
-  cursor: pointer;
-  margin: 10px;
-  border: 2px solid var(--light-yellow);
-  background-color: transparent;
-  color: var(--light-yellow);
-  font-family: var(--font-sans);
-  padding: 15px 20px;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background-color: var(--light-yellow);
-  color: var(--black);
 }
 
 .link {
@@ -107,10 +91,11 @@
 
 .inputs {
   font-family: var(--font-mono);
-  border: none;
-  background-color: var(--white);
-  margin: 20px;
-  color: var(--black);
+  border: 2px solid var(--white);
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 10px;
+  color: var(--white);
   padding: 15px;
 }
 
@@ -123,7 +108,102 @@
   height: 20vh;
 }
 
+.button {
+  cursor: pointer;
+  border: 2px solid var(--light-yellow);
+  background-color: var(--light-yellow);
+  color: var(--black);
+  font-family: var(--font-mono);
+  padding: 15px 20px;
+  font-weight: 600;
+  /* border-radius: 5px; */
+}
+
+.button:hover {
+  background-color: var(--light-yellow);
+  color: var(--black);
+}
+
 .inputs:focus {
-  border-bottom: 3px solid var(--light-yellow);
+  /* border-bottom: 3px solid var(--light-yellow); */
+  /* outline: 2px solid var(--light-yellow); */
   outline: none;
+  border: 2px solid var(--light-yellow);
+  transition: border 0.3s ease;
+}
+
+.nameLabel,
+.emailLabel {
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 1px;
+  top: 36vh;
+  opacity: 0;
+  position: absolute;
+  background-color: transparent;
+  cursor: text;
+  border: none;
+  transition: top 0.3s;
+  padding: 0 5px;
+}
+
+.nameLabel {
+  left: 27vw;
+}
+
+.emailLabel {
+  left: 51vw;
+}
+
+.msgLabel {
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 1px;
+  top: 47vh;
+  left: 27vw;
+  opacity: 0;
+  position: absolute;
+  background-color: transparent;
+  cursor: text;
+  border: none;
+  transition: top 0.3s;
+  padding: 0 5px;
+}
+
+.name:focus::placeholder,
+.email:focus::placeholder,
+.message:focus::placeholder {
+  color: transparent;
+}
+
+.name:focus ~ .nameLabel,
+.email:focus ~ .emailLabel {
+  position: absolute;
+  top: 34vh;
+  background-color: var(--black);
+  color: var(--light-yellow);
+  opacity: 1;
+  font-size: 13px;
+}
+
+.name:focus ~ .nameLabel {
+  left: 27vw;
+}
+
+.email:focus ~ .emailLabel {
+  left: 51vw;
+}
+
+.message:focus ~ .msgLabel {
+  position: absolute;
+  top: 45vh;
+  left: 27vw;
+  background-color: var(--black);
+  color: var(--light-yellow);
+  opacity: 1;
+  font-size: 13px;
 }

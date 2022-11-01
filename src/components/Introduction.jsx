@@ -1,6 +1,4 @@
 import React from "react";
-import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
-import { MdOutlineArrowDownward } from "react-icons/md";
 import { GoChevronDown } from "react-icons/go";
 import { motion } from "framer-motion";
 import "../styles/Landing.css";
