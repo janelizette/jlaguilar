@@ -41,7 +41,11 @@ function ContactMe() {
           }
         );
     } else {
-      console.log("error");
+      Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: "Please enter a valid email address.",
+      });
     }
   };
 
@@ -92,7 +96,7 @@ function ContactMe() {
               type="text"
               name="user_name"
               placeholder="Name"
-              className={[Contact.name, Contact.inputs].join(" ")}
+              className={[Contact.name, Contact.inputs, Contact.box].join(" ")}
               required
             />
             <label className={[Contact.nameLabel, Contact.inputs].join(" ")}>
@@ -102,7 +106,7 @@ function ContactMe() {
               type="email"
               name="user_email"
               placeholder="Email"
-              className={`${Contact.email} ${Contact.inputs}`}
+              className={[Contact.email, Contact.inputs, Contact.box].join(" ")}
               required
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -114,7 +118,7 @@ function ContactMe() {
           <textarea
             name="message"
             placeholder="Message"
-            className={`${Contact.message} ${Contact.inputs}`}
+            className={[Contact.message, Contact.inputs, Contact.box].join(" ")}
             required
           />
           <label className={[Contact.msgLabel, Contact.inputs].join(" ")}>

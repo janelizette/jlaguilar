@@ -138,16 +138,22 @@
   color: var(--black);
 }
 
-.inputs:focus {
+.box:focus {
   outline: none;
   border: 2px solid var(--light-yellow);
   transition: border 0.3s ease;
   background-color: transparent;
 }
 
-.button:focus {
+/* .button:focus {
+  cursor: pointer;
   border: none;
-}
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font-sans);
+  padding: 15px 20px;
+  font-weight: 600;
+} */
 
 .nameLabel,
 .emailLabel {
