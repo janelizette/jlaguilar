@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import validator from "validator";
 import Swal from "sweetalert2";
+import { HiArrowSmLeft } from "react-icons/hi";
+import { IoChevronBackCircleSharp } from "react-icons/io5";
+import { FiArrowLeft } from "react-icons/fi";
 import Contact from "../styles/ContactMe.module.css";
 
 function ContactMe() {
@@ -51,46 +54,74 @@ function ContactMe() {
 
   return (
     <div className={Contact.container}>
-      <div className={Contact.title}>
-        <h1 className={Contact.heading1}>Get in touch</h1>
+      <div
+        className={Contact.container}
+        style={{
+          position: "absolute",
+          opacity: !showForm ? 1 : 0,
+          backgroundColor: "#202020",
+          transition: "all 0.3s",
+          right: !showForm ? 0 : "40%",
+          visibility: !showForm ? "visible" : "hidden",
+        }}
+      >
+        <div className={Contact.title}>
+          <h1 className={Contact.heading1}>Get in touch</h1>
+        </div>
+
+        <div className={Contact.content}>
+          <p className={Contact.paragraph}>
+            Send me a message and I'll get back to you as soon as possible!
+          </p>
+          <button
+            className={Contact.button}
+            onClick={() => {
+              setShowForm(true);
+            }}
+          >
+            Say hello
+          </button>
+          <p className={Contact.paragraph}>
+            Or download my resume for your reference!
+          </p>
+
+          <a
+            href="https://drive.google.com/file/d/1YdW8TPrgiIcE_Yd7qKTrAYWizPkNrhl4/view?usp=share_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            // className={Contact.link}
+            className={Contact.button}
+          >
+            Resume
+          </a>
+        </div>
       </div>
-
-      {/* <div className={Contact.content}>
-        <p className={Contact.paragraph}>
-          Send me a message and I'll get back to you as soon as possible!
-        </p>
-        <button
-          className={Contact.button}
-          onClick={() => {
-            setShowForm(true);
-          }}
-        >
-          Say hello
-        </button>
-        <p className={Contact.paragraph}>
-          Or download my resume for your reference!
-        </p>
-
-        <a
-          href="https://drive.google.com/file/d/1YdW8TPrgiIcE_Yd7qKTrAYWizPkNrhl4/view?usp=share_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={Contact.link}
-        >
-          Resume
-        </a>
-      </div> */}
-
-      <div className={Contact.content}>
-        <p className={Contact.paragraph}>
-          Send me a message and I'll get back to you as soon as possible!
-        </p>
+      <div
+        className={Contact.formContent}
+        style={{
+          position: "absolute",
+          opacity: showForm ? 1 : 0,
+          backgroundColor: "#202020",
+          transition: "all 0.3s",
+          left: showForm ? 0 : "40%",
+          visibility: showForm ? "visible" : "hidden",
+        }}
+      >
         <form
           ref={form}
           onSubmit={sendEmail}
           className={Contact.formContainer}
           id="contact-form"
         >
+          <div className={Contact.back}>
+            <button
+              type="button"
+              className={[Contact.backBtn].join(" ")}
+              onClick={() => setShowForm(false)}
+            >
+              <HiArrowSmLeft size={25} />
+            </button>
+          </div>
           <div className={Contact.nameEmailContainer}>
             <input
               type="text"

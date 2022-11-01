@@ -17,6 +17,15 @@
   height: 100vh;
 }
 
+.formContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -75,6 +84,19 @@
   border: 2px solid var(--light-yellow);
 }
 
+.back {
+  /* background: gray; */
+}
+
+.backBtn {
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  color: var(--light-yellow);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -121,7 +143,10 @@
   color: var(--black);
   font-family: var(--font-sans);
   padding: 15px 20px;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: 600;
+  font-size: 13px;
   /* slide */
   background-image: linear-gradient(
     0,
@@ -162,7 +187,7 @@
   font-weight: 200;
   font-size: 14px;
   letter-spacing: 1px;
-  top: 36vh;
+  top: 30%;
   opacity: 0;
   position: absolute;
   background-color: transparent;
@@ -173,11 +198,11 @@
 }
 
 .nameLabel {
-  left: 27vw;
+  left: 27%;
 }
 
 .emailLabel {
-  left: 51vw;
+  left: 51%;
 }
 
 .msgLabel {
@@ -206,7 +231,7 @@
 .name:focus ~ .nameLabel,
 .email:focus ~ .emailLabel {
   position: absolute;
-  top: 34vh;
+  top: 28%;
   background-color: var(--black);
   color: var(--light-yellow);
   opacity: 1;
@@ -214,16 +239,16 @@
 }
 
 .name:focus ~ .nameLabel {
-  left: 27vw;
+  left: 27%;
 }
 
 .email:focus ~ .emailLabel {
-  left: 51vw;
+  left: 51%;
 }
 
 .message:focus ~ .msgLabel {
   position: absolute;
-  top: 45vh;
+  top: 38.5%;
   left: 27vw;
   background-color: var(--black);
   color: var(--light-yellow);
