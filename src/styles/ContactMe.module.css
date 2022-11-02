@@ -107,9 +107,7 @@
   width: 25vw;
 }
 
-.name,
-.email,
-.message {
+.margin {
   margin: 2%;
 }
 

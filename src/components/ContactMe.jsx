@@ -170,8 +170,7 @@ function ContactMe() {
               variant="outlined"
               required
               type="text"
-              // className={[Contact.name]}
-              className={Contact.name}
+              className={[Contact.name, Contact.margin].join(" ")}
               onChange={(e) => setName(e.target.value)}
             />
 
@@ -183,7 +182,7 @@ function ContactMe() {
               variant="outlined"
               required
               type="email"
-              className={Contact.email}
+              className={[Contact.email, Contact.margin].join(" ")}
               onChange={(e) => setEmail(e.target.value)}
               InputLabelProps={{
                 margin: 5,
@@ -201,7 +200,7 @@ function ContactMe() {
             multiline
             rows={7}
             required
-            className={Contact.message}
+            className={[Contact.message, Contact.margin].join(" ")}
             onChange={(e) => setMsg(e.target.value)}
           />
 
