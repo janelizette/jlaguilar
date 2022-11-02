@@ -164,44 +164,46 @@ function ContactMe() {
           <div className={Contact.nameEmailContainer}>
             <StyledTextField
               value={name}
-              // id="outlined-basic"
               name="user_name"
               label="Name"
               variant="outlined"
               required
               type="text"
-              className={[Contact.name, Contact.margin].join(" ")}
+              className={Contact.name}
               onChange={(e) => setName(e.target.value)}
+              style={{
+                margin: "2%",
+              }}
             />
 
             <StyledTextField
               value={email}
-              // id="outlined-basic"
               name="user_email"
               label="Email"
               variant="outlined"
               required
               type="email"
-              className={[Contact.email, Contact.margin].join(" ")}
+              className={Contact.email}
               onChange={(e) => setEmail(e.target.value)}
-              InputLabelProps={{
-                margin: 5,
-                padding: 5,
+              style={{
+                margin: "2%",
               }}
             />
           </div>
 
           <StyledTextField
             value={msg}
-            // id="outlined-multiline-static"
             name="message"
             label="Message"
             variant="outlined"
             multiline
             rows={7}
             required
-            className={[Contact.message, Contact.margin].join(" ")}
+            className={Contact.message}
             onChange={(e) => setMsg(e.target.value)}
+            style={{
+              margin: "2%",
+            }}
           />
 
           <div className={Contact.btnContainer}>
