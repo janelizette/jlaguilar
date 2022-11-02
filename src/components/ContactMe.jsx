@@ -2,14 +2,51 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import validator from "validator";
 import Swal from "sweetalert2";
+import TextField from "@mui/material/TextField";
+import { alpha, styled } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
 import { HiArrowSmLeft } from "react-icons/hi";
-import { IoChevronBackCircleSharp } from "react-icons/io5";
-import { FiArrowLeft } from "react-icons/fi";
 import Contact from "../styles/ContactMe.module.css";
+
+const StyledTextField = styled(TextField)({
+  "& label": {
+    // fontFamily: "Roboto Mono",
+    // fontWeight: 300,
+    color: "#f7f4f3",
+    opacity: 0.5,
+  },
+  "& label.Mui-focused": {
+    color: "#ffee32",
+    opacity: 1,
+  },
+  "label + &": {
+    marginRight: 3,
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "#ffee32",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#f7f4f3",
+    },
+    "&:hover fieldset": {
+      borderColor: "#ffee32",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#ffee32",
+    },
+  },
+  "& .MuiInputBase-input": {
+    fontFamily: "Roboto Mono",
+    color: "#f7f4f3",
+  },
+});
 
 function ContactMe() {
   const [showForm, setShowForm] = useState(false);
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -32,7 +69,9 @@ function ContactMe() {
               title: "Hooray!",
               text: "Email sent successfully.",
             });
-            document.getElementById("contact-form").reset();
+            setName("");
+            setEmail("");
+            setMsg("");
           },
           (error) => {
             console.log(error.text);
@@ -111,55 +150,66 @@ function ContactMe() {
           ref={form}
           onSubmit={sendEmail}
           className={Contact.formContainer}
-          id="contact-form"
+          autoComplete="off"
         >
           <div className={Contact.back}>
             <button
               type="button"
-              className={[Contact.backBtn].join(" ")}
+              className={Contact.backBtn}
               onClick={() => setShowForm(false)}
             >
               <HiArrowSmLeft size={25} />
             </button>
           </div>
           <div className={Contact.nameEmailContainer}>
-            <input
-              type="text"
+            <StyledTextField
+              value={name}
+              // id="outlined-basic"
               name="user_name"
-              placeholder="Name"
-              className={[Contact.name, Contact.inputs, Contact.box].join(" ")}
+              label="Name"
+              variant="outlined"
               required
+              type="text"
+              // className={[Contact.name]}
+              className={Contact.name}
+              onChange={(e) => setName(e.target.value)}
             />
-            <label className={[Contact.nameLabel, Contact.inputs].join(" ")}>
-              Name
-            </label>
-            <input
-              type="email"
+
+            <StyledTextField
+              value={email}
+              // id="outlined-basic"
               name="user_email"
-              placeholder="Email"
-              className={[Contact.email, Contact.inputs, Contact.box].join(" ")}
+              label="Email"
+              variant="outlined"
               required
+              type="email"
+              className={Contact.email}
               onChange={(e) => setEmail(e.target.value)}
+              InputLabelProps={{
+                margin: 5,
+                padding: 5,
+              }}
             />
-            <label className={[Contact.emailLabel, Contact.inputs].join(" ")}>
-              Email
-            </label>
           </div>
 
-          <textarea
+          <StyledTextField
+            value={msg}
+            // id="outlined-multiline-static"
             name="message"
-            placeholder="Message"
-            className={[Contact.message, Contact.inputs, Contact.box].join(" ")}
+            label="Message"
+            variant="outlined"
+            multiline
+            rows={7}
             required
+            className={Contact.message}
+            onChange={(e) => setMsg(e.target.value)}
           />
-          <label className={[Contact.msgLabel, Contact.inputs].join(" ")}>
-            Message
-          </label>
+
           <div className={Contact.btnContainer}>
             <input
               type="submit"
               value="Send message!"
-              className={[Contact.button, Contact.inputs].join(" ")}
+              className={[Contact.button].join(" ")}
             />
           </div>
         </form>
