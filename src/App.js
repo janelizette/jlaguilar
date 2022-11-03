@@ -7,7 +7,7 @@ import ContactMe from "./components/ContactMe";
 import Sidebar from "./styles/Sidebar.module.css";
 import "./App.css";
 
-const anchors = ["Hi!", "About", "Contact"]; // Dagdag ka isa dito pag dadagdag ka section, eto yung names sa gilid
+const anchors = ["Hi!", "About", "Contact"];
 
 const App = () => (
   <div>
@@ -16,7 +16,7 @@ const App = () => (
       scrollingSpeed={1000}
       navigation
       navigationTooltips={anchors}
-      sectionsColor={["#202020", "#202020", "#202020"]} // Dagdag ka isa dito pag dadagdag ka section, background colors to
+      sectionsColor={["#202020", "#202020", "#202020"]}
       onLeave={(origin, destination, direction) => {
         // console.log("onLeave event", { origin, destination, direction });
       }}
@@ -26,19 +26,19 @@ const App = () => (
           <div>
             <div
               className="section"
-              style={{ width: "100vw", height: "100vh" }}
+              // style={{ width: "100vw", height: "100vh" }}
             >
               <Introduction />
             </div>
             <div
               className="section"
-              style={{ width: "100vw", height: "100vh" }}
+              // style={{ width: "100vw", height: "100vh" }}
             >
               <Education />
             </div>
             <div
               className="section"
-              style={{ width: "100vw", height: "100vh" }}
+              // style={{ width: "100vw", height: "100vh" }}
             >
               <ContactMe />
             </div>
