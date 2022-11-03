@@ -1,10 +1,11 @@
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
 
 import Introduction from "./components/Introduction";
 import Education from "./components/Education";
 import ContactMe from "./components/ContactMe";
-import Sidebar from "./styles/Sidebar.module.css";
+import Sidebar from "./components/Sidebar";
+
 import "./App.css";
 
 const anchors = ["Hi!", "About", "Contact"];
@@ -47,39 +48,7 @@ const App = () => (
       }}
     />
 
-    {/* Sidebar */}
-    <div className={Sidebar.sidebar}>
-      <ul className={Sidebar.ul}>
-        <li className={Sidebar.li}>
-          <a
-            href="https://github.com/janelizette"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiGithub color="#f7f4f3" size={20} />
-          </a>
-        </li>
-        <li className={Sidebar.li}>
-          {" "}
-          <a
-            href="https://www.linkedin.com/in/janelizetteaguilar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiLinkedin color="#f7f4f3" size={20} />
-          </a>
-        </li>
-        <li className={Sidebar.li}>
-          <a
-            href="https://facebook.com/jnlzt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiFacebook color="#f7f4f3" size={20} />
-          </a>
-        </li>
-      </ul>
-    </div>
+    <Sidebar />
   </div>
 );
 

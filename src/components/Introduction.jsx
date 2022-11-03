@@ -31,39 +31,6 @@ function Introduction() {
         </motion.div>
       </header>
 
-      {/* <div className="sidebar">
-        <ul>
-          <li>
-            <a
-              href="https://github.com/janelizette"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiGithub color="#f7f4f3" size={20} />
-            </a>
-          </li>
-          <li>
-            {" "}
-            <a
-              href="https://www.linkedin.com/in/janelizetteaguilar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiLinkedin color="#f7f4f3" size={20} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://facebook.com/jnlzt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiFacebook color="#f7f4f3" size={20} />
-            </a>
-          </li>
-        </ul>
-      </div> */}
-
       {/* <footer>
         <p>Designed and built by Jane Lizette Aguilar</p>
       </footer> */}

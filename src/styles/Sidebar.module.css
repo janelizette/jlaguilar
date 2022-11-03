@@ -1,3 +1,13 @@
+:root {
+  --black: #202020;
+  --yellow: #ffd100;
+  --light-yellow: #ffee32;
+  --lightest-yellow: #fff0ad;
+  --white: #f7f4f3;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
 .sidebar {
   position: fixed;
   bottom: 0;
@@ -22,4 +32,12 @@
 
 .li {
   margin: 20px 0;
+}
+
+.icon {
+  color: var(--white);
+}
+
+.icon:hover {
+  color: var(--light-yellow);
 }
